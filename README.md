@@ -1,12 +1,16 @@
 # WangSwift
 基于Swift4、XCode9
 
-### Swift项目模式：
+### Swift项目规划：
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
-    * 优势：高度自定义，二期开发容易
-    * 劣势：开发速度慢，二期开发复杂
+    * 优势：高度自定义，二期开发容易
+    * 劣势：开发速度慢，二期开发复杂
+* 更多功能逐渐添加
+    * swift4基础语法示例代码
+    * 自定义视图
+    * swift动画
 
-### Swift项目介绍:
+### Swift文件介绍:
 |文件名|作用|
 |---|---|
 |[AppDelegate](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/AppDelegate.swift)|纯代码创建window视图|
@@ -14,6 +18,46 @@
 |[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合|
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
+
+### Swift开源模板：
+* 第三方库使用
+    * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
+    ```Swift
+    func useAlamofire() {
+        //?channel=头条&num=1&start=0&appkey=\(newsKey)"
+        Alamofire.request("https://way.jd.com/jisuapi/get", parameters: ["channel": "头条", "num": "1", "start": "0", "appkey": "ab10d0327c38043562215a81bd634171"]).responseJSON { (response) in
+            print("\(response.result)")
+            print("\(String(describing: response.response))")
+            let json: [String: Any] = try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String : Any]
+            
+            //可选值获取指定属性
+            if let channelValue1 = ((json["result"] as? [String: Any])?["result"] as?[String: Any])?["channel"] as? String {
+                print("channelValue1的值为:\(channelValue1)")
+            }
+            //swiftjson
+            let jsons = JSON(data: response.data!)
+            if let channelValue = jsons["result"]["result"]["channel"].string {
+                print(channelValue)
+            }
+        }
+    }
+    ```
+    * JSON解析：[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+    ```Swift
+    //传统取值
+    if let channelValue1 = ((json["result"] as? [String: Any])?["result"] as?[String: Any])?["channel"] as? String {
+       print("channelValue1的值为:\(channelValue1)")
+    }
+    
+    //swiftjson取值
+    let jsons = JSON(data: response.data!)
+    if let channelValue = jsons["result"]["result"]["channel"].string {
+       print(channelValue)
+    }
+    ```
+    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
+    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
+    * 桥接引入：OC库稍后加入
 
 ### Swift代码模板：
 * UI组件
@@ -166,15 +210,46 @@
     ```
 * 网络请求
     * GET
+    ```Swift
+    // MARK: - 基础网络请求:GET,post
+    func get_network() {
+        let urlString = "https://way.jd.com/jisuapi/get?channel=头条&num=1&start=0&appkey=\(newsKey)"
+        let toUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let Url = URL.init(string: toUrl!)
+        let request = NSMutableURLRequest.init(url: Url!)
+        let mysession = URLSession.shared
+        let dataTask = mysession.dataTask(with: request as URLRequest) { (data, response, error) -> Void in
+            if error != nil {
+                return
+            } else {
+                let json: Any = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
+                print(json)
+                self.storeResponse?.append("\n")
+                self.storeResponse?.append("\(json)")
+                DispatchQueue.global().async {
+                    DispatchQueue.main.async {
+                        self.textView.text = self.storeResponse
+                    }
+                }
+            }
+        }
+        dataTask.resume()
+    }
+    ```
     * POST
-    * ...
-* 第三方库使用
-    * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
-    * JSON解析：[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
-    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
-    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
-    * 桥接引入：OC库稍后加入
-* 更多功能逐渐添加
-    * swift4基础语法示例代码
-    * 自定义视图
-    * swift动画
+    ```Swift
+        基于上面代码增加：
+        request.httpMethod = "POST"//GET
+        /*
+        // 数据体
+        var jsonData:NSData? =nil
+        do {
+            jsonData  = tryNSJSONSerialization.dataWithJSONObject(params, options:NSJSONWritingOptions.PrettyPrinted)
+        } catch {
+            
+        }
+        // 将字符串转换成数据
+        request.HTTPBody = jsonData
+         */
+    ```
+    * 其它...

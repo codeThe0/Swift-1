@@ -58,7 +58,7 @@
         self.myScroll.addSubview(imageView)
     }
     ```
-    * UIButton
+    * UIButton
     ```Swift
     // MARK: - 按钮
     func make_button() {

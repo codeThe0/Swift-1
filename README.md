@@ -236,5 +236,16 @@
     ```
     * POST
     ```Swift
+    let request = NSMutableURLRequest.init(url: Url!)
+    request.httpMethod = "POST"//GET
+    // 数据体
+    var jsonData:NSData? =nil
+    do {
+        jsonData  = tryNSJSONSerialization.dataWithJSONObject(params, options:NSJSONWritingOptions.PrettyPrinted)
+    } catch {
+    
+    }
+    // 将字符串转换成数据
+    request.HTTPBody = jsonData
     ```
     * 其它...

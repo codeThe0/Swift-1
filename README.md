@@ -29,7 +29,6 @@
             print("\(response.result)")
             print("\(String(describing: response.response))")
             let json: [String: Any] = try! JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String : Any]
-            
             //可选值获取指定属性
             if let channelValue1 = ((json["result"] as? [String: Any])?["result"] as?[String: Any])?["channel"] as? String {
                 print("channelValue1的值为:\(channelValue1)")

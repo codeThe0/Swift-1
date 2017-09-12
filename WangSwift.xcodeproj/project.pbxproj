@@ -14,6 +14,9 @@
 		43D281C81F665F6600207847 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 43D281C71F665F6600207847 /* test.png */; };
 		43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281C91F66701700207847 /* WangUIViewController.swift */; };
 		43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281CB1F66820B00207847 /* WangNetViewController.swift */; };
+		43D281D01F67715700207847 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 43D281CF1F67715700207847 /* Podfile */; };
+		43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */; };
+		5202A0BF4259FB1D9FCC790A /* Pods_WangSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B072A85F347881AC2D15D5 /* Pods_WangSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		43D281C71F665F6600207847 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		43D281C91F66701700207847 /* WangUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangUIViewController.swift; sourceTree = "<group>"; };
 		43D281CB1F66820B00207847 /* WangNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangNetViewController.swift; sourceTree = "<group>"; };
+		43D281CF1F67715700207847 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangAlamofireAndSwiftyJSONViewController.swift; sourceTree = "<group>"; };
+		776B43EC864743423E65CB44 /* Pods-WangSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		7B88C682E4EA4FF4A2FF7CEC /* Pods-WangSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift.release.xcconfig"; sourceTree = "<group>"; };
+		B9B072A85F347881AC2D15D5 /* Pods_WangSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WangSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5202A0BF4259FB1D9FCC790A /* Pods_WangSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390AD84CA211A28B53FEDFFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				776B43EC864743423E65CB44 /* Pods-WangSwift.debug.xcconfig */,
+				7B88C682E4EA4FF4A2FF7CEC /* Pods-WangSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		43D281A81F665BF700207847 = {
 			isa = PBXGroup;
 			children = (
 				43D281B31F665BF700207847 /* WangSwift */,
 				43D281B21F665BF700207847 /* Products */,
+				390AD84CA211A28B53FEDFFC /* Pods */,
+				EB8210597F86A1992103CBFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +78,7 @@
 		43D281B31F665BF700207847 /* WangSwift */ = {
 			isa = PBXGroup;
 			children = (
+				43D281CF1F67715700207847 /* Podfile */,
 				43D281C01F665BF700207847 /* Info.plist */,
 				43D281CE1F66822200207847 /* Code */,
 				43D281CD1F66821300207847 /* Resources */,
@@ -82,8 +103,17 @@
 				43D281B61F665BF700207847 /* ViewController.swift */,
 				43D281C91F66701700207847 /* WangUIViewController.swift */,
 				43D281CB1F66820B00207847 /* WangNetViewController.swift */,
+				43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */,
 			);
 			path = Code;
+			sourceTree = "<group>";
+		};
+		EB8210597F86A1992103CBFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9B072A85F347881AC2D15D5 /* Pods_WangSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43D281C31F665BF700207847 /* Build configuration list for PBXNativeTarget "WangSwift" */;
 			buildPhases = (
+				D6F4146F5D323B5D925FA9A5 /* [CP] Check Pods Manifest.lock */,
 				43D281AD1F665BF700207847 /* Sources */,
 				43D281AE1F665BF700207847 /* Frameworks */,
 				43D281AF1F665BF700207847 /* Resources */,
+				B308CD5A33C606BAAE5E768E /* [CP] Embed Pods Frameworks */,
+				6E79BF19C0CD1578A543AEF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,17 +180,75 @@
 			files = (
 				43D281BF1F665BF700207847 /* LaunchScreen.storyboard in Resources */,
 				43D281BC1F665BF700207847 /* Assets.xcassets in Resources */,
+				43D281D01F67715700207847 /* Podfile in Resources */,
 				43D281C81F665F6600207847 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E79BF19C0CD1578A543AEF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B308CD5A33C606BAAE5E768E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6F4146F5D323B5D925FA9A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WangSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43D281AD1F665BF700207847 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */,
 				43D281B71F665BF700207847 /* ViewController.swift in Sources */,
 				43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */,
 				43D281B51F665BF700207847 /* AppDelegate.swift in Sources */,
@@ -288,6 +379,7 @@
 		};
 		43D281C41F665BF700207847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 776B43EC864743423E65CB44 /* Pods-WangSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +395,7 @@
 		};
 		43D281C51F665BF700207847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B88C682E4EA4FF4A2FF7CEC /* Pods-WangSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

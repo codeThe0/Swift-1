@@ -10,7 +10,7 @@ import UIKit
 
 class WangNetViewController: UIViewController {
     
-    let newsKey = "ab10d0327c38043562215a81bd634171"
+    public let newsKey = "ab10d0327c38043562215a81bd634171"
     var textView: UITextView!
     var storeResponse: String?
 

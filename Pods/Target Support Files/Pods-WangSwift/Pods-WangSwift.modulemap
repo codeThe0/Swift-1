@@ -1,0 +1,6 @@
+framework module Pods_WangSwift {
+  umbrella header "Pods-WangSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -217,7 +217,6 @@
     do {
         jsonData  = tryNSJSONSerialization.dataWithJSONObject(params, options:NSJSONWritingOptions.PrettyPrinted)
     } catch {
-    
     }
     // 将字符串转换成数据
     request.HTTPBody = jsonData

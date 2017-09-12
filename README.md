@@ -4,18 +4,18 @@ Swift搭建项目、纯代码
 ### Swift代码知识点：
 * 纯代码
 * UI组件
-     * UIWindow
-     * UITabBarController
-     * UINavigationController
-     * UIViewController
-     * UIView
-     * UIButton
-     * UILabel
-     * UITextField
-     * UITextView
-     * UIScrollView
-     * UITableView
-     * UITableViewCell
+    * UIWindow
+    * UITabBarController
+    * UINavigationController
+    * UIViewController
+    * UIView
+    * UIButton
+    * UILabel
+    * UITextField
+    * UITextView
+    * UIScrollView
+    * UITableView
+    * UITableViewCell
 * 网络请求
     * GET
     * POST

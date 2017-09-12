@@ -8,8 +8,8 @@
 ✘    更多代码正在挖掘... <br/>
 ```
 <br/>
-|文件名|作用|
-|------|-----|
+|文件名|作用|描述|
+|------|-----|---|
 |AppDelegate|纯代码创建window视图|tabbar、navbar、vc结合|
 |ViewController|纯代码创建tableview作为功能介绍根视图|功能跳转界面|
 |WangUIViewController|一些简单的UI组件|UI控件集合|

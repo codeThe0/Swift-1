@@ -50,7 +50,7 @@
     ```Swift
     let view = UIView()
     ```
-    * UIImageView
+    * UIImageView
     ```Swift
     func make_imageview() {
         let imageView = UIImageView.init(frame: CGRect(x: 0, y: 50, width: 100, height: 100))

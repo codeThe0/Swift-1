@@ -61,6 +61,7 @@ class WangUIViewController: UIViewController {
     // MARK: - 按钮
     func make_button() {
         let btn = UIButton(frame: CGRect(x: 0, y: 150, width: 100, height: 50))
+        btn.backgroundColor = .yellow
         btn.setTitleColor(.black, for: .normal)
         btn.setTitle("按钮", for: .normal)
         btn.setTitle("点击", for: .highlighted)

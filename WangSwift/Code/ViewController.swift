@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
-    let itemList = ["UI", "网络请求"]
+    let itemList = ["基础UI图形", "原生网络请求"]
     
 
     override func viewDidLoad() {

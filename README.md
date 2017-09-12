@@ -16,8 +16,8 @@
 		* WangUIViewController：一些简单的UI组件
 		* WangNetViewController：网络请求处理代码
 		* WangAlamofireAndSwiftyJSONViewController：Alamofire + SwiftyJSON库使用
-	* source
+ 	* source
 		* 资源文件
-	* git
+ 	* git
 		* Alamofire ：网络请求
 		* SwiftyJSON：json解析

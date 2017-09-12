@@ -2,9 +2,23 @@
 Swift搭建项目、纯代码
 
 ### Swift代码知识点：
-* 纯代码
+* 纯代码 VS 故事板 -.- Code VS StoryBoard
+    * 优势：高度自定义，二期开发容易
+    * 劣势：开发速度慢，二期开发复杂
 * UI组件
     * UIWindow
+    ```
+    self.window = UIWindow.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+    let wangViewController = ViewController()
+    wangViewController.title = "swift项目纯代码示例"
+    let wangNavigationViewController = UINavigationController.init(rootViewController: wangViewController)
+    wangNavigationViewController.tabBarItem.title = "王家伟"
+    wangNavigationViewController.tabBarItem.image = UIImage(named: "test")
+    let wangTabBarViewController = UITabBarController.init()
+    wangTabBarViewController.setViewControllers([wangNavigationViewController], animated: true)
+    self.window?.rootViewController = wangTabBarViewController
+    self.window?.makeKeyAndVisible()
+    ```
     * UITabBarController
     * UINavigationController
     * UIViewController

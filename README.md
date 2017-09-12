@@ -4,9 +4,32 @@ Swift搭建项目、纯代码
 ### Swift代码知识点：
 * 纯代码
 * UI组件
+     * UIWindow
+     * UITabBarController
+     * UINavigationController
+     * UIViewController
+     * UIView
+     * UIButton
+     * UILabel
+     * UITextField
+     * UITextView
+     * UIScrollView
+     * UITableView
+     * UITableViewCell
 * 网络请求
+    * GET
+    * POST
+    * ...
 * 第三方库使用
-* 更多代码正在挖掘...
+    * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
+    * JSON解析：[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
+    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
+    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
+    * 桥接引入：OC库稍后加入
+* 更多功能逐渐添加
+    * swift4基础语法示例代码
+    * 自定义视图
+    * swift动画
 
 ### 介绍
 |文件名|作用|

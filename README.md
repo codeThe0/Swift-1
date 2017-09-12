@@ -27,14 +27,14 @@
     * JSON解析：[SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
     ```Swift
     //可选值获取指定属性
-if let channelValue1 = ((json["result"] as? [String: Any])?["result"] as?[String: Any])?["channel"] as? String {
-print("channelValue1的值为:\(channelValue1)")
-}
-//swiftjson
-let jsons = JSON(data: response.data!)
-if let channelValue = jsons["result"]["result"]["channel"].string {
-print(channelValue)
-}
+    if let channelValue1 = ((json["result"] as? [String: Any])?["result"] as?[String: Any])?["channel"] as? String {
+      print("channelValue1的值为:\(channelValue1)")
+    }
+    //swiftjson
+    let jsons = JSON(data: response.data!)
+    if let channelValue = jsons["result"]["result"]["channel"].string {
+      print(channelValue)
+    }
     ```
     * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
     * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)

@@ -1,6 +1,6 @@
 # WangSwift
 基于Swift4、XCode9
-<br/>
+
 ### Swift项目规划：
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
     * 优势：高度自定义，二期开发容易
@@ -9,7 +9,7 @@
     * swift4基础语法示例代码
     * 自定义视图
     * swift动画
-<br/>
+    
 ### Swift文件介绍:
 |文件名|作用|
 |---|---|
@@ -18,7 +18,7 @@
 |[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合|
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
-<br/>
+
 ### Swift开源模板：
 * 第三方库使用
     * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
@@ -56,7 +56,7 @@
     * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
     * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
     * 桥接引入：OC库稍后加入
-<br/>
+    
 ### Swift代码模板：
 * UI组件
     * UIWindow

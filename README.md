@@ -1,7 +1,7 @@
 # WangSwift
-基于Swift4、XCode9
+func learn(langeage: OC) -> Swift { return Swift }
 
-* 目录
+* 基于Swift4、XCode9
     * [Swift项目规划](#Swift项目规划)
     * [Swift文件介绍](#Swift文件介绍)
     * [Swift开源模板](#Swift开源模板)

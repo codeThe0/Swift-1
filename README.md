@@ -267,7 +267,7 @@
     NSLayoutConstraint(item: self.view1, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
     NSLayoutConstraint(item: self.view1, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
     ```
-    * 方式二：self.view.addConstraints()
+    * 方式二：self.view.addConstraints()
     ```Swift
     //获取实例对象：加入约束
     self.view2 = UIView()
@@ -282,7 +282,7 @@
     let view2Constraints = [view2Left, view2Top, view2Width, view2Height]
     self.view.addConstraints(view2Constraints)
     ```
-    * 方式三：
+    * 方式三：
     ```Swift
     //VFL语言约束：返回如上面的数组形式，内部转化
     self.view3.translatesAutoresizingMaskIntoConstraints = false

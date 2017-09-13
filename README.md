@@ -291,3 +291,33 @@
     self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[lazyView(usewidth)]-20-|", options: .alignAllRight, metrics: ["usewidth": 50], views: myViews))
     self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-300-[lazyView(50)]", options: .alignAllTop, metrics: nil, views: myViews))
     ```
+### Swift的懒加载
+* 懒加载
+   * 简介：在用到的时候对代码进行创建，用不到不创建。
+   ```Swift
+   //1.分析 NSArray 是一个闭包的返回值，而这是一个没有参数的闭包
+   lazy var dataArray:NSArray = { [] }()
+   //2.也可以写成这样
+   lazy var dataArray:NSArray = { return NSArray() }()
+   //3.从plist文件加载
+   lazy var dataArray:Array<XWWine> = {
+   let winePath = NSBundle.mainBundle().pathForResource("wine.plist", ofType: nil)!
+   let winesM = NSMutableArray(contentsOfFile: winePath);
+   var tmpArray:Array<XWWine>! = []
+   for tmpWineDict in winesM! {
+     var wine:XWWine = XWWine.wineWithDict(tmpWineDict as! NSDictionary)
+     tmpArray.append(wine)
+   }
+   print("我就运行一次")
+   return tmpArray }()
+   ```
+   * 本项目示例代码：
+   ```Swift
+   //删减了闭包的参数、返回值以及in关键字,这是在闭包赋值时的简化形式
+    lazy var view3: UIView = {
+        //() -> UIView in //可隐藏部分
+        let newView = UIView()
+        newView.backgroundColor = .yellow
+        return newView
+    }()
+   ```

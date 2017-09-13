@@ -1,10 +1,16 @@
 # WangSwift
 基于Swift4、XCode9
 
-* 目录导航
-    * [Swift的懒加载](#Swift的懒加载)
-
-### Swift项目规划：
+* 目录
+    * [Swift项目规划](#Swift项目规划)
+    * [Swift文件介绍](#Swift文件介绍)
+    * [Swift开源模板](#Swift开源模板)
+    * [Swift代码模板](#Swift代码模板)
+    * [Swift网络原生](#Swift网络原生)
+    * [Swift约束布局](#Swift约束布局)
+    * [Swift的懒加载](#Swift的懒加载)
+    
+### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
     * 优势：高度自定义，二期开发容易 / 开发速度快，飞起
     * 劣势：开发速度慢，不符合潮流 / 二次开发复杂不好团队协作
@@ -13,7 +19,7 @@
     * 自定义视图
     * swift动画
     
-### Swift文件介绍:
+### Swift文件介绍
 |文件名|作用|
 |---|---|
 |[AppDelegate](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/AppDelegate.swift)|纯代码创建window视图|
@@ -23,7 +29,7 @@
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 
-### Swift开源模板：
+### Swift开源模板
 * 第三方库使用
     * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
     ```Swift
@@ -61,7 +67,7 @@
     * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
     * 桥接引入：OC库稍后加入
     
-### Swift代码模板：
+### Swift代码模板
 * UI组件
     * UIWindow
     ```Swift

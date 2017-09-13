@@ -45,8 +45,8 @@ class WangAutolayoutViewController: UIViewController {
         view2?.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.view2!)
         let view2Left = NSLayoutConstraint(item: view2!, attribute: .left, relatedBy: .equal, toItem: view1, attribute: .right, multiplier: 1, constant: 50)
-        let view2Top = NSLayoutConstraint(item: view2!, attribute: .top, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1, constant: 50)
-        let view2Width = NSLayoutConstraint(item: view2!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 200)
+        let view2Top = NSLayoutConstraint(item: view2!, attribute: .top, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1, constant: 300)
+        let view2Width = NSLayoutConstraint(item: view2!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: self.view.frame.size.width * 0.3)
         let view2Height = NSLayoutConstraint(item: view2!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 100)
         let view2Constraints = [view2Left, view2Top, view2Width, view2Height]
         self.view.addConstraints(view2Constraints)

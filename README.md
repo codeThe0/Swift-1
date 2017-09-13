@@ -9,6 +9,7 @@ func learn(langeage: OC) -> Swift { return Swift }
     * [Swift网络原生](#Swift网络原生)
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
+    * [Swift闭包使用](#Swift闭包使用)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -331,3 +332,39 @@ func learn(langeage: OC) -> Swift { return Swift }
         return newView
     }()
    ```
+### Swift闭包使用
+* swift闭包
+    * Closures：闭包，闭包是自包含的函数代码块，可以在代码中被传递和使用。Swift 中的闭包与 C 和 Objective-C 中的代码块（blocks）以及其他一些编程语言中的匿名函数比较相似。闭包可以捕获和存储其所在上下文中任意常量和变量的引用。被称为包裹常量和变量。 Swift 会为你管理在捕获过程中涉及到的所有内存操作。
+    * 项目内应用：反向传值
+        * 闭包声明
+        ```Swift
+        //闭包名称：{ (parameters) -> returnType in statement }
+        typealias WangButtonClosures = (String, String) -> ()
+        ```
+        * 闭包赋值方法声明
+        ```Swift
+        var myButtonClosures: WangButtonClosures?
+        /* 或者使用实例方法调用（方法名字不固定，但参数是必须的） 不推荐
+        func setMyButtonClosures(tempClose: @escaping WangButtonClosures)  {
+            self.myButtonClosures = tempClose
+         }
+         */
+        ```
+        * 闭包当前界面调用传值
+        ```Swift
+        self.myButtonClosures!("修改了UI图形标题", "多参数")
+        ```
+        * 闭包回调结果调用
+        ```Swift
+        let vc = WangUIViewController()
+        vc.hidesBottomBarWhenPushed = true
+        weak var WeakSelf = self
+        vc.myButtonClosures = { (text, text2) -> () in
+            //重新获取strong self
+            let strSelf = WeakSelf
+            strSelf?.itemList[0] = text
+            strSelf?.baseTableView.reloadData()
+            print("多余的参数：\(text2)")
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
+        ```

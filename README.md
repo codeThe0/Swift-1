@@ -2,7 +2,7 @@
 基于Swift4、XCode9
 
 * 目录导航
-    * [Swift的懒加载](#s1)
+    * [Swift的懒加载](#Swift的懒加载)
 
 ### Swift项目规划：
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -296,8 +296,7 @@
     ```
 
 
-
-<h2 id="1">Swift的懒加载</h2>
+### Swift的懒加载
 * 懒加载
     * 简介：在用到的时候对代码进行创建，用不到不创建。
     ```Swift

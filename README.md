@@ -1,16 +1,25 @@
 # WangSwift
-基于Swift4、XCode9
+func learn(langeage: OC) -> Swift { return Swift }
 
-### Swift项目规划：
+* 基于Swift4、XCode9
+    * [Swift项目规划](#Swift项目规划)
+    * [Swift文件介绍](#Swift文件介绍)
+    * [Swift开源模板](#Swift开源模板)
+    * [Swift代码模板](#Swift代码模板)
+    * [Swift网络原生](#Swift网络原生)
+    * [Swift约束布局](#Swift约束布局)
+    * [Swift的懒加载](#Swift的懒加载)
+    
+### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
-    * 优势：高度自定义，二期开发容易
-    * 劣势：开发速度慢，二期开发复杂
+    * 优势：高度自定义，二期开发容易 / 开发速度快，飞起
+    * 劣势：开发速度慢，不符合潮流 / 二次开发复杂不好团队协作
 * 更多功能逐渐添加
     * swift4基础语法示例代码
     * 自定义视图
     * swift动画
     
-### Swift文件介绍:
+### Swift文件介绍
 |文件名|作用|
 |---|---|
 |[AppDelegate](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/AppDelegate.swift)|纯代码创建window视图|
@@ -18,8 +27,9 @@
 |[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合|
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
+|[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 
-### Swift开源模板：
+### Swift开源模板
 * 第三方库使用
     * 网络解析：[Alamofire](https://github.com/Alamofire/Alamofire)
     ```Swift
@@ -57,7 +67,7 @@
     * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
     * 桥接引入：OC库稍后加入
     
-### Swift代码模板：
+### Swift代码模板
 * UI组件
     * UIWindow
     ```Swift
@@ -206,6 +216,7 @@
         }
     }
     ```
+### Swift网络原生
 * 网络请求
     * GET
     ```Swift
@@ -249,3 +260,74 @@
     request.HTTPBody = jsonData
     ```
     * 其它...
+
+### Swift约束布局
+* Autolayout
+    * 方式一：.isActive = true
+    ```Swift
+    //添加约束
+    //默认创建之后是关闭的需要动态打开即：.isActive = true
+    self.view1 = UIView.init()
+    self.view1.backgroundColor = .green
+    view1.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view1!)
+    NSLayoutConstraint(item: self.view1, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 100).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 30).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
+    ```
+    * 方式二：self.view.addConstraints()
+    ```Swift
+    //获取实例对象：加入约束
+    self.view2 = UIView()
+    view2?.backgroundColor = .red
+    view2?.frame = CGRect(x: 100, y: 80, width: 100, height: 100)
+    view2?.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view2!)
+    let view2Left = NSLayoutConstraint(item: view2!, attribute: .left, relatedBy: .equal, toItem: view1, attribute: .right, multiplier: 1, constant: 50)
+    let view2Top = NSLayoutConstraint(item: view2!, attribute: .top, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1, constant: 50)
+    let view2Width = NSLayoutConstraint(item: view2!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 200)
+    let view2Height = NSLayoutConstraint(item: view2!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 100)
+    let view2Constraints = [view2Left, view2Top, view2Width, view2Height]
+    self.view.addConstraints(view2Constraints)
+    ```
+    * 方式三：
+    ```Swift
+    //VFL语言约束：返回如上面的数组形式，内部转化
+    self.view3.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view3)
+    let myViews: [String: Any] = ["lazyView": self.view3, "superView": self.view]
+    self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[lazyView(usewidth)]-20-|", options: .alignAllRight, metrics: ["usewidth": 50], views: myViews))
+    self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-300-[lazyView(50)]", options: .alignAllTop, metrics: nil, views: myViews))
+    ```
+
+### Swift的懒加载
+* 懒加载
+    * 简介：在用到的时候对代码进行创建，用不到不创建。
+    ```Swift
+    //1.分析 NSArray 是一个闭包的返回值，而这是一个没有参数的闭包
+    lazy var dataArray:NSArray = { [] }()
+    //2.也可以写成这样
+    lazy var dataArray:NSArray = { return NSArray() }()
+    //3.从plist文件加载
+    lazy var dataArray:Array<XWWine> = {
+    let winePath = NSBundle.mainBundle().pathForResource("wine.plist", ofType: nil)!
+    let winesM = NSMutableArray(contentsOfFile: winePath);
+    var tmpArray:Array<XWWine>! = []
+    for tmpWineDict in winesM! {
+       var wine:XWWine = XWWine.wineWithDict(tmpWineDict as! NSDictionary)
+       tmpArray.append(wine)
+    }
+    print("我就运行一次")
+    return tmpArray }()
+    ```
+   * 本项目示例代码：
+   ```Swift
+   //删减了闭包的参数、返回值以及in关键字,这是在闭包赋值时的简化形式
+    lazy var view3: UIView = {
+        //() -> UIView in //可隐藏部分
+        let newView = UIView()
+        newView.backgroundColor = .yellow
+        return newView
+    }()
+   ```

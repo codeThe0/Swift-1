@@ -3,8 +3,8 @@
 
 ### Swift项目规划：
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
-    * 优势：高度自定义，二期开发容易
-    * 劣势：开发速度慢，二期开发复杂
+    * 优势：高度自定义，二期开发容易 / 开发速度快，飞起
+    * 劣势：开发速度慢，不符合潮流 / 二次开发复杂不好团队协作
 * 更多功能逐渐添加
     * swift4基础语法示例代码
     * 自定义视图
@@ -18,6 +18,7 @@
 |[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合|
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
+|[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 
 ### Swift开源模板：
 * 第三方库使用
@@ -206,6 +207,7 @@
         }
     }
     ```
+### Swift网络原生
 * 网络请求
     * GET
     ```Swift
@@ -249,3 +251,43 @@
     request.HTTPBody = jsonData
     ```
     * 其它...
+
+### Swift约束布局
+* Autolayout
+    * 方式一：.isActive = true
+    ```Swift
+    //添加约束
+    //默认创建之后是关闭的需要动态打开即：.isActive = true
+    self.view1 = UIView.init()
+    self.view1.backgroundColor = .green
+    view1.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view1!)
+    NSLayoutConstraint(item: self.view1, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 100).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1, constant: 30).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
+    NSLayoutConstraint(item: self.view1, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 50).isActive = true
+    ```
+    * 方式二：self.view.addConstraints()
+    ```Swift
+    //获取实例对象：加入约束
+    self.view2 = UIView()
+    view2?.backgroundColor = .red
+    view2?.frame = CGRect(x: 100, y: 80, width: 100, height: 100)
+    view2?.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view2!)
+    let view2Left = NSLayoutConstraint(item: view2!, attribute: .left, relatedBy: .equal, toItem: view1, attribute: .right, multiplier: 1, constant: 50)
+    let view2Top = NSLayoutConstraint(item: view2!, attribute: .top, relatedBy: .equal, toItem: view1, attribute: .bottom, multiplier: 1, constant: 50)
+    let view2Width = NSLayoutConstraint(item: view2!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 200)
+    let view2Height = NSLayoutConstraint(item: view2!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 100)
+    let view2Constraints = [view2Left, view2Top, view2Width, view2Height]
+    self.view.addConstraints(view2Constraints)
+    ```
+    * 方式三：
+    ```Swift
+    //VFL语言约束：返回如上面的数组形式，内部转化
+    self.view3.translatesAutoresizingMaskIntoConstraints = false
+    self.view.addSubview(self.view3)
+    let myViews: [String: Any] = ["lazyView": self.view3, "superView": self.view]
+    self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[lazyView(usewidth)]-20-|", options: .alignAllRight, metrics: ["usewidth": 50], views: myViews))
+    self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-300-[lazyView(50)]", options: .alignAllTop, metrics: nil, views: myViews))
+    ```

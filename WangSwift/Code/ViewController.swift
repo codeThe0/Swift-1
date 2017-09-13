@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
-    let itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局"]
+    var itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局"]
     
 
     override func viewDidLoad() {
@@ -56,6 +56,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.row == 0 {
             let vc = WangUIViewController()
             vc.hidesBottomBarWhenPushed = true
+            weak var WeakSelf = self
+            vc.myButtonClosures = { (text, text2) -> () in
+                //重新获取strong self
+                let strSelf = WeakSelf
+                strSelf?.itemList[0] = text
+                strSelf?.baseTableView.reloadData()
+                print("多余的参数：\(text2)")
+            }
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 1 {
             let vc = WangNetViewController()

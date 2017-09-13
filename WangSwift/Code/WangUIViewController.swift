@@ -8,9 +8,19 @@
 
 import UIKit
 
+//闭包名称：{ (parameters) -> returnType in statement }
+typealias WangButtonClosures = (String, String) -> ()
+
 /// 简单的UI控件
 class WangUIViewController: UIViewController {
-
+    
+    var myButtonClosures: WangButtonClosures?
+    /* 或者使用实例方法调用（方法名字不固定，但参数是必须的） 不推荐
+    func setMyButtonClosures(tempClose: @escaping WangButtonClosures)  {
+        self.myButtonClosures = tempClose
+    }
+     */
+    
     var myScroll: UIScrollView!
     
     override func viewDidLoad() {
@@ -73,6 +83,7 @@ class WangUIViewController: UIViewController {
     @objc func btnTap(_ mybtn: UIButton) {
         print(mybtn.titleLabel?.text ?? "无值")
         print("点击了按钮")
+        self.myButtonClosures!("修改了UI图形标题", "多参数")
         make_alert()
     }
     

@@ -2,8 +2,7 @@
 基于Swift4、XCode9
 
 * 目录导航
-   * [1.项目规划](### Swift项目规划)
-   * [2.Swift懒加载](### Swift的懒加载)
+   * [Swift的懒加载](#Swift的懒加载)
 
 ### Swift项目规划：
 * 纯代码 VS 故事板 -.- Code VS StoryBoard

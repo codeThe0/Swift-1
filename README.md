@@ -351,7 +351,7 @@ func learn(langeage: OC) -> Swift { return Swift }
          */
         ```
         * 闭包当前界面调用传值
-        ```Swift
+        ```Swift
         self.myButtonClosures!("修改了UI图形标题", "多参数")
         ```
         * 闭包回调结果调用

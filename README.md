@@ -301,8 +301,7 @@ func learn(langeage: OC) -> Swift { return Swift }
     self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-300-[lazyView(50)]", options: .alignAllTop, metrics: nil, views: myViews))
     ```
 
-Swift的懒加载
-------
+### Swift的懒加载
 * 懒加载
     * 简介：在用到的时候对代码进行创建，用不到不创建。
     ```Swift

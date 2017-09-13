@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
-    let itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用"]
+    let itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局"]
     
 
     override func viewDidLoad() {
@@ -63,6 +63,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 2 {
             let vc = WangAlamofireAndSwiftyJSONViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 3 {
+            let vc = WangAutolayoutViewController()
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }

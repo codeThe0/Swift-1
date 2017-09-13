@@ -16,6 +16,7 @@
 		43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281CB1F66820B00207847 /* WangNetViewController.swift */; };
 		43D281D01F67715700207847 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 43D281CF1F67715700207847 /* Podfile */; };
 		43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */; };
+		43D281DC1F68C17900207847 /* WangAutolayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281DB1F68C17900207847 /* WangAutolayoutViewController.swift */; };
 		5202A0BF4259FB1D9FCC790A /* Pods_WangSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B072A85F347881AC2D15D5 /* Pods_WangSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		43D281CB1F66820B00207847 /* WangNetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangNetViewController.swift; sourceTree = "<group>"; };
 		43D281CF1F67715700207847 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangAlamofireAndSwiftyJSONViewController.swift; sourceTree = "<group>"; };
+		43D281DB1F68C17900207847 /* WangAutolayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangAutolayoutViewController.swift; sourceTree = "<group>"; };
 		776B43EC864743423E65CB44 /* Pods-WangSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		7B88C682E4EA4FF4A2FF7CEC /* Pods-WangSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WangSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B9B072A85F347881AC2D15D5 /* Pods_WangSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WangSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 				43D281C91F66701700207847 /* WangUIViewController.swift */,
 				43D281CB1F66820B00207847 /* WangNetViewController.swift */,
 				43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */,
+				43D281DB1F68C17900207847 /* WangAutolayoutViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */,
 				43D281B71F665BF700207847 /* ViewController.swift in Sources */,
+				43D281DC1F68C17900207847 /* WangAutolayoutViewController.swift in Sources */,
 				43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */,
 				43D281B51F665BF700207847 /* AppDelegate.swift in Sources */,
 				43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */,

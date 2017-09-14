@@ -378,4 +378,10 @@ func learn(langeage: OC) -> Swift { return Swift }
         * 自创建桥接文件（可省略）:SWIFT_OBJC_BRIDGING_HEADER = WangSwift-Bridging-Header.h
         * 在桥接文件导入要用的.h文件
         * 在swift中直接调用即可
-    * pod导入混编
+        ```Objective-C
+        #import "Test.h"
+        ```
+    * pod导入混编
+        * 基本步骤同上，但是导入的都变成了静态库需要修改一些问题：use_framework!
+        * 首先要确认是否可以寻找到静态库头文件
+        * 其它问题，等稍后导入介绍

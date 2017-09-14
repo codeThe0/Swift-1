@@ -382,6 +382,6 @@ func learn(langeage: OC) -> Swift { return Swift }
         #import "Test.h"
         ```
     * pod导入混编
-        * 基本步骤同上，但是导入的都变成了静态库需要修改一些问题：use_framework!
+        * 基本步骤同上，但是导入的都变成了静态库需要修改一些问题：use_framework!
         * 首先要确认是否可以寻找到静态库头文件
         * 其它问题，等稍后导入介绍

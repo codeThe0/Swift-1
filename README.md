@@ -10,7 +10,7 @@ func learn(langeage: OC) -> Swift { return Swift }
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
     * [Swift闭包使用](#Swift闭包使用)
-    * [Swift桥接混编](#Swift桥接混编)
+    * [Swift桥接混编](#Swift桥接混编)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -374,8 +374,8 @@ func learn(langeage: OC) -> Swift { return Swift }
 ### Swift桥接混编
 * swift混编oc
     * 自创建混编
-        * 创建oc文件，同时会提示创建桥接文件。直接点同意就可以，如果想自己创建也可以。
-        * 自创建桥接文件（可省略）:SWIFT_OBJC_BRIDGING_HEADER = WangSwift-Bridging-Header.h
-        * 在桥接文件导入要用的.h文件
-        * 在swift中直接调用即可
-    * pod导入混编
+        * 创建oc文件，同时会提示创建桥接文件。直接点同意就可以，如果想自己创建也可以。
+        * 自创建桥接文件（可省略）:SWIFT_OBJC_BRIDGING_HEADER = WangSwift-Bridging-Header.h
+        * 在桥接文件导入要用的.h文件
+        * 在swift中直接调用即可
+    * pod导入混编

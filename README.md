@@ -41,6 +41,7 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 |[WangOCBridgingViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangOCBridgingViewController.swift)|swift与oc混编|
+|[WangSnapKitViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangSnapKitViewController.swift)|Swift的SnapKit约束布局使用|
 
 ### Swift开源模板
 * 第三方库使用
@@ -76,9 +77,31 @@ func learn(fromLangeage: OC) -> Swift {
       print(channelValue)
     }
     ```
-    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit)(暂未支持swift4)
-    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher)(暂未支持swift4)
-    * 桥接引入：OC库稍后加入
+    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit) -> 3.2.0修改一个rawValue值问题，及其他语法修改API即可.
+    ```Swift
+    self.view.addSubview(view1)
+    view1.snp.makeConstraints { (wang) in
+        wang.width.height.equalTo(50)
+        wang.left.equalTo(self.view.snp.left).offset(50)
+        wang.top.equalTo(self.view.snp.top).offset(100)
+    }
+        
+    self.view.addSubview(view2)
+    view2.snp.makeConstraints { (jia) in
+        jia.width.height.equalTo(view1.snp.height)
+        jia.left.equalTo(view1.snp.right)
+        jia.bottom.equalTo(self.view.snp.bottom)
+    }
+        
+    view3.backgroundColor = .red
+    self.view.addSubview(view3)
+    view3.snp.makeConstraints { (wei) in
+        wei.height.equalTo(self.view.frame.size.height * 0.1)
+        wei.width.equalTo(self.view.frame.size.height * 0.2)
+        wei.center.equalTo(self.view.snp.center)
+    }
+    ```
+    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
     
 ### Swift代码模板
 * UI组件

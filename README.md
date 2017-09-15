@@ -102,7 +102,7 @@ func learn(fromLangeage: OC) -> Swift {
         wei.center.equalTo(self.view.snp.center)
     }
     ```
-    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
+    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
     ```Swift
     //Http请求需要允许infoplist设置
     let url = URL(string: "http://wangjiawei.wang/images/swift.gif")

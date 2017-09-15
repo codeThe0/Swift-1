@@ -77,7 +77,7 @@ func learn(fromLangeage: OC) -> Swift {
       print(channelValue)
     }
     ```
-    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit) -> 3.2.0修改一个rawValue值问题，及其他语法修改API即可.
+    * 约束布局：[SnapKit](https://github.com/SnapKit/SnapKit) -> 3.2.0修改一个rawValue值问题，及其他语法修改API即可.
     ```Swift
     self.view.addSubview(view1)
     view1.snp.makeConstraints { (wang) in

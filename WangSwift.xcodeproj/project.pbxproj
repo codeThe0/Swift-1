@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
 		43D281B51F665BF700207847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B41F665BF700207847 /* AppDelegate.swift */; };
 		43D281B71F665BF700207847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B61F665BF700207847 /* ViewController.swift */; };
 		43D281BC1F665BF700207847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D281BB1F665BF700207847 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
 		43D281B11F665BF700207847 /* WangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D281B41F665BF700207847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D281B61F665BF700207847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				43D281D11F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift */,
 				43D281DB1F68C17900207847 /* WangAutolayoutViewController.swift */,
 				43E773BB1F6A5C41005C0734 /* WangOCBridgingViewController.swift */,
+				4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -225,11 +228,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */,
+				4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */,
 				43D281B71F665BF700207847 /* ViewController.swift in Sources */,
 				43D281DC1F68C17900207847 /* WangAutolayoutViewController.swift in Sources */,
 				43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */,

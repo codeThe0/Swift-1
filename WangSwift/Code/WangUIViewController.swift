@@ -14,6 +14,8 @@ typealias WangButtonClosures = (String, String) -> ()
 /// 简单的UI控件
 class WangUIViewController: UIViewController {
     
+    //var newClosure: ((String) -> ())?
+    
     var myButtonClosures: WangButtonClosures?
     /* 或者使用实例方法调用（方法名字不固定，但参数是必须的） 不推荐
     func setMyButtonClosures(tempClose: @escaping WangButtonClosures)  {

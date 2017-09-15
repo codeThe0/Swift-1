@@ -42,6 +42,7 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 |[WangOCBridgingViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangOCBridgingViewController.swift)|swift与oc混编|
 |[WangSnapKitViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangSnapKitViewController.swift)|Swift的SnapKit约束布局使用|
+|[WangKingfisherViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangKingfisherViewController.swift)|异步图片加载|
 
 ### Swift开源模板
 * 第三方库使用
@@ -102,6 +103,15 @@ func learn(fromLangeage: OC) -> Swift {
     }
     ```
     * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
+    ```Swift
+    //Http请求需要允许infoplist设置
+    let url = URL(string: "http://wangjiawei.wang/images/swift.gif")
+    imageView.kf.setImage(with: url, placeholder: UIImage.init(named: "test"), options: nil, progressBlock: { (ing, still) in
+            
+    }) { (image, error, cacheType, url) in
+            
+    }
+    ```
     
 ### Swift代码模板
 * UI组件

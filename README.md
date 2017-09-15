@@ -1,6 +1,16 @@
 # WangSwift
-func learn(langeage: OC) -> Swift { return Swift }
+```Swift
+func learn(fromLangeage: OC) -> Swift { 
+    return WangSwift 
+}
+```
 
+* 联系方式
+    * QQ : 542413041
+    * 邮箱 : (542413041@qq.com)
+    * [博客](http://www.wangjiawei.wang)
+    * [微博](http://weibo.com/u/3193598595)
+ 
 * 基于Swift4、XCode9
     * [Swift项目规划](#Swift项目规划)
     * [Swift文件介绍](#Swift文件介绍)
@@ -10,7 +20,8 @@ func learn(langeage: OC) -> Swift { return Swift }
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
     * [Swift闭包使用](#Swift闭包使用)
-    
+    * [Swift桥接混编](#Swift桥接混编)
+    
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
     * 优势：高度自定义，二期开发容易 / 开发速度快，飞起
@@ -29,6 +40,7 @@ func learn(langeage: OC) -> Swift { return Swift }
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
+|[WangOCBridgingViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangOCBridgingViewController.swift)|swift与oc混编|
 
 ### Swift开源模板
 * 第三方库使用
@@ -368,3 +380,18 @@ func learn(langeage: OC) -> Swift { return Swift }
         }
         self.navigationController?.pushViewController(vc, animated: true)
         ```
+
+### Swift桥接混编
+* swift混编oc
+    * 自创建混编
+        * 创建oc文件，同时会提示创建桥接文件。直接点同意就可以，如果想自己创建也可以。
+        * 自创建桥接文件（可省略）:SWIFT_OBJC_BRIDGING_HEADER = WangSwift-Bridging-Header.h
+        * 在桥接文件导入要用的.h文件
+        * 在swift中直接调用即可
+        ```Objective-C
+        #import "Test.h"
+        ```
+    * pod导入混编
+        * 基本步骤同上，但是导入的都变成了静态库需要修改一些问题：use_framework!
+        * 首先要确认是否可以寻找到静态库头文件
+        * 其它问题，等稍后导入介绍

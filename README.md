@@ -3,9 +3,9 @@ func learn(langeage: OC) -> Swift { return Swift }
 
 * 联系方式
     * QQ : 542413041
-    * [博客](http://www.wangjiawei.wang)
-    * [邮箱](542413041@qq.com)
-    * [微博](http://weibo.com/u/3193598595)
+    * 邮箱 : (542413041@qq.com)
+    * [博客](http://www.wangjiawei.wang)
+    * [微博](http://weibo.com/u/3193598595)
  
 * 基于Swift4、XCode9
     * [Swift项目规划](#Swift项目规划)

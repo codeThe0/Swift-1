@@ -1,5 +1,9 @@
 # WangSwift
-func learn(langeage: OC) -> Swift { return Swift }
+```Swift
+func learn(fromLangeage: OC) -> Swift { 
+    return WangSwift 
+}
+```
 
 * 联系方式
     * QQ : 542413041

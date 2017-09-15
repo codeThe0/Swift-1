@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
+		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		43D281B51F665BF700207847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B41F665BF700207847 /* AppDelegate.swift */; };
 		43D281B71F665BF700207847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B61F665BF700207847 /* ViewController.swift */; };
 		43D281BC1F665BF700207847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D281BB1F665BF700207847 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
+		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		43D281B11F665BF700207847 /* WangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D281B41F665BF700207847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D281B61F665BF700207847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				43D281DB1F68C17900207847 /* WangAutolayoutViewController.swift */,
 				43E773BB1F6A5C41005C0734 /* WangOCBridgingViewController.swift */,
 				4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */,
+				4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				43E773BC1F6A5C41005C0734 /* WangOCBridgingViewController.swift in Sources */,
 				43D281B51F665BF700207847 /* AppDelegate.swift in Sources */,
 				43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */,
+				4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

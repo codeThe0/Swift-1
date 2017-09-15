@@ -107,9 +107,9 @@ func learn(fromLangeage: OC) -> Swift {
     //Http请求需要允许infoplist设置
     let url = URL(string: "http://wangjiawei.wang/images/swift.gif")
     imageView.kf.setImage(with: url, placeholder: UIImage.init(named: "test"), options: nil, progressBlock: { (ing, still) in
-            
+    
     }) { (image, error, cacheType, url) in
-            
+    
     }
     ```
     

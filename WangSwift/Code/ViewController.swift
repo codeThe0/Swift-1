@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
     var itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局", "swift调用OC方法", "SnapKit使用方法", "Kingfisher使用方法"]
-    
+    var syntaxList = ["闭包"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +37,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.view.addSubview(self.baseTableView)
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = (section == 0) ? "项目" : "语法"
+        return label
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     //MARK: 列表协议
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
+        return (section == 0) ? itemList.count : syntaxList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,48 +62,65 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: myTableViewReuseIdentifer)
         }
-        cell?.textLabel?.text = itemList[indexPath.row]
+        cell?.textLabel?.text = (indexPath.section == 0) ? itemList[indexPath.row] : syntaxList[indexPath.row]
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row == 0 {
-            let vc = WangUIViewController()
-            vc.hidesBottomBarWhenPushed = true
-            weak var WeakSelf = self
-            vc.myButtonClosures = { (text, text2) -> () in
-                //重新获取strong self
-                let strSelf = WeakSelf
-                strSelf?.itemList[0] = text
-                strSelf?.baseTableView.reloadData()
-                print("多余的参数：\(text2)")
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == 0 {
+                let vc = WangUIViewController()
+                vc.hidesBottomBarWhenPushed = true
+                weak var WeakSelf = self
+                vc.myButtonClosures = { (text, text2) -> () in
+                    //重新获取strong self
+                    let strSelf = WeakSelf
+                    strSelf?.itemList[0] = text
+                    strSelf?.baseTableView.reloadData()
+                    print("多余的参数：\(text2)")
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 1 {
+                let vc = WangNetViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 2 {
+                let vc = WangAlamofireAndSwiftyJSONViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 3 {
+                let vc = WangAutolayoutViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 4{
+                let vc = WangOCBridgingViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 5 {
+                let vc = WangSnapKitViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 6 {
+                let vc = WangKingfisherViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 1 {
-            let vc = WangNetViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 2 {
-            let vc = WangAlamofireAndSwiftyJSONViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 3 {
-            let vc = WangAutolayoutViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 4{
-            let vc = WangOCBridgingViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 5 {
-            let vc = WangSnapKitViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 6 {
-            let vc = WangKingfisherViewController()
-            vc.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(vc, animated: true)
+            break;
+        case 1:
+            switch indexPath.row {
+            case 0:
+                let vc = WangClosures()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+                break;
+            default:
+                break;
+            }
+            break
+        default:
+            break;
         }
     }
 

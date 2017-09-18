@@ -10,6 +10,7 @@
 		43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E8F1F6F6CFA008BDEBC /* WangStack.swift */; };
 		43382E921F6F6DA6008BDEBC /* AlgorithmRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E911F6F6DA6008BDEBC /* AlgorithmRun.swift */; };
 		43382E941F6F6F3B008BDEBC /* WangQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E931F6F6F3B008BDEBC /* WangQueue.swift */; };
+		43382E961F6F7471008BDEBC /* WangClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E951F6F7471008BDEBC /* WangClosures.swift */; };
 		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
 		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		43D281B51F665BF700207847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B41F665BF700207847 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		43382E8F1F6F6CFA008BDEBC /* WangStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangStack.swift; sourceTree = "<group>"; };
 		43382E911F6F6DA6008BDEBC /* AlgorithmRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmRun.swift; sourceTree = "<group>"; };
 		43382E931F6F6F3B008BDEBC /* WangQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangQueue.swift; sourceTree = "<group>"; };
+		43382E951F6F7471008BDEBC /* WangClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangClosures.swift; sourceTree = "<group>"; };
 		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
 		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		43D281B11F665BF700207847 /* WangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 		43382E8E1F6F6CA6008BDEBC /* Syntax */ = {
 			isa = PBXGroup;
 			children = (
+				43382E951F6F7471008BDEBC /* WangClosures.swift */,
 			);
 			path = Syntax;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				43382E941F6F6F3B008BDEBC /* WangQueue.swift in Sources */,
 				43E773BC1F6A5C41005C0734 /* WangOCBridgingViewController.swift in Sources */,
 				43D281B51F665BF700207847 /* AppDelegate.swift in Sources */,
+				43382E961F6F7471008BDEBC /* WangClosures.swift in Sources */,
 				43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */,
 				43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */,
 				4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */,

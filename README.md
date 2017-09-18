@@ -436,7 +436,7 @@ func learn(fromLangeage: OC) -> Swift {
 
 ### Swift底层实践
 * 常用数据结构
-    * 栈实现
+    * 栈实现
     ```Swift
     public struct WangStack<T> {
         fileprivate var array = [T]()
@@ -461,8 +461,8 @@ func learn(fromLangeage: OC) -> Swift {
             return array.last
         }
     }
-    ```
-    * 队列实现
+    ```
+    * 队列实现
     ```Swift
     public struct Queue<T> {
         fileprivate var array = [T]()

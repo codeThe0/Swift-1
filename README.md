@@ -490,7 +490,5 @@ func learn(fromLangeage: OC) -> Swift {
 * 基础语法
     * 闭包:
     ```Swift
-    { (参数) -> 返回值 in
-        语句
-    }
-    ```
+    { (参数) -> 返回值 in 语句 }
+    ```

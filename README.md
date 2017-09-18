@@ -439,56 +439,63 @@ func learn(fromLangeage: OC) -> Swift {
     * 栈实现
     ```Swift
     public struct WangStack<T> {
-    fileprivate var array = [T]()
+        fileprivate var array = [T]()
     
-    public var isEmpty: Bool {
-        return array.isEmpty
-    }
+        public var isEmpty: Bool {
+            return array.isEmpty
+        }
     
-    public var count: Int {
-        return array.count
-    }
+        public var count: Int {
+            return array.count
+        }
     
-    public mutating func push(_ element: T) {
-        array.append(element)
-    }
+        public mutating func push(_ element: T) {
+            array.append(element)
+        }
     
-    public mutating func pop() -> T? {
-        return array.popLast()
-    }
+        public mutating func pop() -> T? {
+            return array.popLast()
+        }
     
-    public var top: T? {
-        return array.last
-    }
+        public var top: T? {
+            return array.last
+        }
     }
     ```
     * 队列实现
     ```Swift
     public struct Queue<T> {
-    fileprivate var array = [T]()
+        fileprivate var array = [T]()
     
-    public var isEmpty: Bool {
-        return array.isEmpty
-    }
+        public var isEmpty: Bool {
+            return array.isEmpty
+        }
     
-    public var count: Int {
-        return array.count
-    }
+        public var count: Int {
+            return array.count
+        }
     
-    public mutating func enqueue(_ element: T) {
-        array.append(element)
-    }
+        public mutating func enqueue(_ element: T) {
+            array.append(element)
+        }
     
-    public mutating func dequeue() -> T? {
-        if isEmpty {
-            return nil
-        } else {
-            return array.removeFirst()
-        }
-    }
+        public mutating func dequeue() -> T? {
+            if isEmpty {
+                return nil
+            } else {
+                return array.removeFirst()
+            }
+        }
     
-    public var front: T? {
-        return array.first
+        public var front: T? {
+            return array.first
+        }
     }
-    }
-    ```
+    ```
+* 基础语法
+    * 闭包:
+    ```Swift
+    { (参数) -> 返回值 in
+        语句
+    }
+    ```

@@ -438,54 +438,9 @@ func learn(fromLangeage: OC) -> Swift {
 * 常用数据结构
     * 栈实现
     ```Swift
-    public struct WangStack<T> {
-        fileprivate var array = [T]()
-        public var isEmpty: Bool {
-            return array.isEmpty
-        }
-        public var count: Int {
-            return array.count
-        }
-        public mutating func push(_ element: T) {
-            array.append(element)
-        }
-        public mutating func pop() -> T? {
-            return array.popLast()
-        }
-        public var top: T? {
-            return array.last
-        }
-    }
     ```
     * 队列实现
     ```Swift
-    public struct Queue<T> {
-        fileprivate var array = [T]()
-    
-        public var isEmpty: Bool {
-            return array.isEmpty
-        }
-    
-        public var count: Int {
-            return array.count
-        }
-    
-        public mutating func enqueue(_ element: T) {
-            array.append(element)
-        }
-    
-        public mutating func dequeue() -> T? {
-            if isEmpty {
-                return nil
-            } else {
-                return array.removeFirst()
-            }
-        }
-    
-        public var front: T? {
-            return array.first
-        }
-    }
     ```
 * 基础语法
     * 闭包:

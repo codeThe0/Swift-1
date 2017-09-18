@@ -4,6 +4,7 @@ func learn(fromLangeage: OC) -> Swift {
     return WangSwift 
 }
 ```
+![思维导图](https://github.com/wang542413041/picturesFactory/blob/master/Swift%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png?raw=true)
 
 * 联系方式
     * QQ : 542413041
@@ -42,6 +43,7 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
 |[WangOCBridgingViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangOCBridgingViewController.swift)|swift与oc混编|
 |[WangSnapKitViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangSnapKitViewController.swift)|Swift的SnapKit约束布局使用|
+|[WangKingfisherViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangKingfisherViewController.swift)|异步图片加载|
 
 ### Swift开源模板
 * 第三方库使用
@@ -101,7 +103,16 @@ func learn(fromLangeage: OC) -> Swift {
         wei.center.equalTo(self.view.snp.center)
     }
     ```
-    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
+    * 图片加载：[KingFisher](https://github.com/onevcat/Kingfisher) -> 4.0.1支持Swift4
+    ```Swift
+    //Http请求需要允许infoplist设置
+    let url = URL(string: "http://wangjiawei.wang/images/swift.gif")
+    imageView.kf.setImage(with: url, placeholder: UIImage.init(named: "test"), options: nil, progressBlock: { (ing, still) in
+    
+    }) { (image, error, cacheType, url) in
+    
+    }
+    ```
     
 ### Swift代码模板
 * UI组件

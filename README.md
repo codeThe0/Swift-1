@@ -436,8 +436,8 @@ func learn(fromLangeage: OC) -> Swift {
 
 ### Swift底层实践
 * 常用数据结构
-    * 栈实现
-    ```Swift
+    * 栈实现
+    ```Swift
     public struct WangStack<T> {
     fileprivate var array = [T]()
     
@@ -459,11 +459,11 @@ func learn(fromLangeage: OC) -> Swift {
     
     public var top: T? {
         return array.last
-    }
     }
+}
     ```
     * 队列实现
-    ```Swift
+    ```Swift
     public struct Queue<T> {
     fileprivate var array = [T]()
     
@@ -489,8 +489,8 @@ func learn(fromLangeage: OC) -> Swift {
     
     public var front: T? {
         return array.first
-    }
     }
+}
     ```
 * 基础语法
     * 闭包:
@@ -498,4 +498,4 @@ func learn(fromLangeage: OC) -> Swift {
     { (参数) -> 返回值 in
         语句
     }
-    ```
+    ```

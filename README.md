@@ -22,7 +22,7 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift的懒加载](#Swift的懒加载)
     * [Swift闭包使用](#Swift闭包使用)
     * [Swift桥接混编](#Swift桥接混编)
-    * [Swift底层实践](#Swift底层实践)
+    * [Swift底层实践](#Swift底层实践)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -433,7 +433,7 @@ func learn(fromLangeage: OC) -> Swift {
 
 ### Swift底层实践
 * 常用数据结构
-    * 栈实现
+    * 栈实现
     ```Swift
     public struct WangStack<T> {
     fileprivate var array = [T]()
@@ -459,7 +459,7 @@ func learn(fromLangeage: OC) -> Swift {
     }
     }
     ```
-    * 队列实现
+    * 队列实现
     ```Swift
     public struct Queue<T> {
     fileprivate var array = [T]()

@@ -1,7 +1,7 @@
 # WangSwift
 ```Swift
 func learn(fromLangeage: OC) -> Swift { 
-    return WangSwift 
+    return WangSwift
 }
 ```
 ![思维导图](https://github.com/wang542413041/picturesFactory/blob/master/Swift%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png?raw=true)
@@ -22,6 +22,7 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift的懒加载](#Swift的懒加载)
     * [Swift闭包使用](#Swift闭包使用)
     * [Swift桥接混编](#Swift桥接混编)
+    * [Swift底层实践](#Swift底层实践)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -429,3 +430,62 @@ func learn(fromLangeage: OC) -> Swift {
         * 基本步骤同上，但是导入的都变成了静态库需要修改一些问题：use_framework!
         * 首先要确认是否可以寻找到静态库头文件
         * 其它问题，等稍后导入介绍
+
+### Swift底层实践
+* 常用数据结构
+    * 栈实现
+    ```Swift
+    public struct WangStack<T> {
+    fileprivate var array = [T]()
+    
+    public var isEmpty: Bool {
+        return array.isEmpty
+    }
+    
+    public var count: Int {
+        return array.count
+    }
+    
+    public mutating func push(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func pop() -> T? {
+        return array.popLast()
+    }
+    
+    public var top: T? {
+        return array.last
+    }
+    }
+    ```
+    * 队列实现
+    ```Swift
+    public struct Queue<T> {
+    fileprivate var array = [T]()
+    
+    public var isEmpty: Bool {
+        return array.isEmpty
+    }
+    
+    public var count: Int {
+        return array.count
+    }
+    
+    public mutating func enqueue(_ element: T) {
+        array.append(element)
+    }
+    
+    public mutating func dequeue() -> T? {
+        if isEmpty {
+            return nil
+        } else {
+            return array.removeFirst()
+        }
+    }
+    
+    public var front: T? {
+        return array.first
+    }
+    }
+    ```

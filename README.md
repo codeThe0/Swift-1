@@ -460,7 +460,7 @@ func learn(fromLangeage: OC) -> Swift {
     public var top: T? {
         return array.last
     }
-    }
+    }
     ```
     * 队列实现
     ```Swift
@@ -490,11 +490,11 @@ func learn(fromLangeage: OC) -> Swift {
     public var front: T? {
         return array.first
     }
-    }
+    }
     ```
 * 基础语法
     * 闭包:
-    ```Swift
+    ```Swift
     { (参数) -> 返回值 in
         语句
     }

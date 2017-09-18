@@ -45,6 +45,9 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangOCBridgingViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangOCBridgingViewController.swift)|swift与oc混编|
 |[WangSnapKitViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangSnapKitViewController.swift)|Swift的SnapKit约束布局使用|
 |[WangKingfisherViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangKingfisherViewController.swift)|异步图片加载|
+|[WangStack](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Algorithm/WangStack.swift)|swift栈的实现|
+|[WangQueue](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Algorithm/WangQueue.swift)|swift队列的实现|
+|[AlgorithmRun](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Algorithm/AlgorithmRun.swift)|Algorithm调用实践|
 
 ### Swift开源模板
 * 第三方库使用

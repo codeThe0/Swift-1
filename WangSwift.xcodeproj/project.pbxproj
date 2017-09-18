@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E8F1F6F6CFA008BDEBC /* WangStack.swift */; };
+		43382E921F6F6DA6008BDEBC /* AlgorithmRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E911F6F6DA6008BDEBC /* AlgorithmRun.swift */; };
+		43382E941F6F6F3B008BDEBC /* WangQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E931F6F6F3B008BDEBC /* WangQueue.swift */; };
 		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
 		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		43D281B51F665BF700207847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B41F665BF700207847 /* AppDelegate.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43382E8F1F6F6CFA008BDEBC /* WangStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangStack.swift; sourceTree = "<group>"; };
+		43382E911F6F6DA6008BDEBC /* AlgorithmRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmRun.swift; sourceTree = "<group>"; };
+		43382E931F6F6F3B008BDEBC /* WangQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangQueue.swift; sourceTree = "<group>"; };
 		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
 		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		43D281B11F665BF700207847 /* WangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +75,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		43382E8D1F6F6C90008BDEBC /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				43382E931F6F6F3B008BDEBC /* WangQueue.swift */,
+				43382E8F1F6F6CFA008BDEBC /* WangStack.swift */,
+				43382E911F6F6DA6008BDEBC /* AlgorithmRun.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		43382E8E1F6F6CA6008BDEBC /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Syntax;
+			sourceTree = "<group>";
+		};
 		43D281A81F665BF700207847 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,8 @@
 			children = (
 				43D281CF1F67715700207847 /* Podfile */,
 				43D281C01F665BF700207847 /* Info.plist */,
+				43382E8E1F6F6CA6008BDEBC /* Syntax */,
+				43382E8D1F6F6C90008BDEBC /* Algorithm */,
 				43D281CE1F66822200207847 /* Code */,
 				43D281CD1F66821300207847 /* Resources */,
 			);
@@ -273,14 +298,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */,
+				43382E921F6F6DA6008BDEBC /* AlgorithmRun.swift in Sources */,
 				4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */,
 				43D281B71F665BF700207847 /* ViewController.swift in Sources */,
 				43D281DC1F68C17900207847 /* WangAutolayoutViewController.swift in Sources */,
 				43D281CC1F66820B00207847 /* WangNetViewController.swift in Sources */,
 				43E773BA1F6A5BB8005C0734 /* Test.m in Sources */,
+				43382E941F6F6F3B008BDEBC /* WangQueue.swift in Sources */,
 				43E773BC1F6A5C41005C0734 /* WangOCBridgingViewController.swift in Sources */,
 				43D281B51F665BF700207847 /* AppDelegate.swift in Sources */,
 				43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */,
+				43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */,
 				4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

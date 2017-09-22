@@ -131,4 +131,14 @@ class WangUIViewController: UIViewController {
             
         }
     }
+    
+    
+    //用来做UnitTest的方法
+    func wangUnitTest() -> Int {
+        var total = 0
+        for i in 0...100 {
+            total += i
+        }
+        return total
+    }
 }

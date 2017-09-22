@@ -1,5 +1,5 @@
 # WangSwift
-3 day developing app
+3天开发iOS APP
 ```Swift
 func learn(fromLangeage: OC) -> Swift { 
     return WangSwift

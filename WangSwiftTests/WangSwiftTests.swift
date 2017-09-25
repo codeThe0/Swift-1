@@ -14,7 +14,6 @@
  做单元测试在swift集成的时候还是存在问题
  1.无法引入文件。说真的我现在也没找到原因
  */
-
 import XCTest
 
 class WangSwiftTests: XCTestCase {
@@ -39,11 +38,10 @@ class WangSwiftTests: XCTestCase {
     //逻辑测试
     func testExample() {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Use XCTAssert and related functions"" to verify your tests produce the correct results.
         let total = wangUnitTest()
         assert(total == 5050, "结果不准确")
     }
-    
     
     //性能测试
     func testPerformanceExample() {
@@ -54,3 +52,20 @@ class WangSwiftTests: XCTestCase {
     }
     
 }
+
+/* 异步测试问题：API violation
+ func testExpectation() {
+ self .measureMetrics([XCTPerformanceMetric.wallClockTime], automaticallyStartMeasuring: true) {
+ let expect = XCTestExpectation(description: "操作超时")
+ DispatchQueue.global().async {
+ sleep(2)
+ assert(true, "错误信息")
+ expect.fulfill()
+ }
+ self.waitForExpectations(timeout: 3) { (error) in
+ print(error ?? "默认错误");
+ self.stopMeasuring()
+ }
+ }
+ }
+ */

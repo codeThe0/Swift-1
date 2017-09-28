@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WangProtocol {
     
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
@@ -72,6 +72,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
+    //遵循代理
+    func wangProtocolChangeName(name: String) {
+        //重新获取strong self
+        self.itemList[1] = name
+        self.baseTableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.section {
@@ -79,6 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if indexPath.row == 0 {
                 let vc = WangUIViewController()
                 vc.hidesBottomBarWhenPushed = true
+                vc.delegate = self
                 weak var WeakSelf = self
                 vc.myButtonClosures = { (text, text2) -> () in
                     //重新获取strong self

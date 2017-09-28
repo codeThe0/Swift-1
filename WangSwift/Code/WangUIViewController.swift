@@ -8,11 +8,18 @@
 
 import UIKit
 
+//代理模式
+protocol WangProtocol: class {
+    func wangProtocolChangeName(name: String)
+}
+
 //闭包名称：{ (parameters) -> returnType in statement }
 typealias WangButtonClosures = (String, String) -> ()
 
 /// 简单的UI控件
 class WangUIViewController: UIViewController {
+    
+    weak var delegate: WangProtocol?
     
     //var newClosure: ((String) -> ())?
     
@@ -109,6 +116,7 @@ class WangUIViewController: UIViewController {
         let alert = UIAlertController(title: "提示", message: "提示框界面", preferredStyle: .alert)
         alert.addAction(UIAlertAction.init(title: "确定", style: .default, handler: { (_: UIAlertAction) in
             print("点击确定按钮")
+            self.delegate?.wangProtocolChangeName(name: "我想要改变的_王家伟")
         }))
         alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: { (_: UIAlertAction) in
             print("点击取消按钮")

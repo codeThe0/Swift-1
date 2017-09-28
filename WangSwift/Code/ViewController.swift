@@ -36,6 +36,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.baseTableView.separatorStyle = .singleLine
         self.baseTableView.tableFooterView = UIView()
         self.view.addSubview(self.baseTableView)
+        
+        self.baseTableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            self.itemList[2] = "MJRefresh混编下拉刷新"
+            self.baseTableView.reloadData()
+            print("刷新操作")
+            let time: TimeInterval = 3.0
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+                //code
+                self.baseTableView.mj_header.endRefreshing()
+            }
+        })
+        self.baseTableView.mj_header.beginRefreshing()
+        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

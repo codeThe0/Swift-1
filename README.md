@@ -551,8 +551,8 @@ func learn(fromLangeage: OC) -> Swift {
         return Static.instance
     }
     ```
-    * <del>OC迁移至Swfit dispatch方式 已废弃</del>
-    ```Swift
+    * <del>OC迁移至Swfit dispatch方式 已废弃</del>
+    ```Swift
     class func sharedInstanceTwo() -> WangInstance {
         struct Singleton{
             //static var onceToken : dispatch_once_t = 0

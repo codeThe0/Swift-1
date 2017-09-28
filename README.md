@@ -51,6 +51,7 @@ func learn(fromLangeage: OC) -> Swift {
 |[AlgorithmRun](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Algorithm/AlgorithmRun.swift)|Algorithm调用实践|
 |[WangUnitTest](https://github.com/wang542413041/WangSwift/blob/master/WangSwiftTests/WangSwiftTests.swift)|swift单元测试代码|
 |[WangGCDViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangGCDViewController.swift)|swift的GCD下载图片示例|
+|[WangCustomCell](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangCustomTableViewCell.swift)|自定义tableviewcell|
 
 ### Swift开源模板
 * 第三方库使用

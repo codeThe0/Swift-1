@@ -21,8 +21,9 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift网络原生](#Swift网络原生)
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
-    * [Swift闭包使用](#Swift闭包使用)
-    * [Swift桥接混编](#Swift桥接混编)
+    * [Swift闭包使用](#Swift闭包使用)
+    * [Swift代理传值](#Swift代理传值)
+    * [Swift桥接混编](#Swift桥接混编)
     * [Swift底层实践](#Swift底层实践)
     
 ### Swift项目规划
@@ -425,19 +426,19 @@ func learn(fromLangeage: OC) -> Swift {
 
 ### Swift代理传值
 * Swift代理传值
-    * 创建代理
+    * 创建代理
     ```Swift
     //代理模式: 1.@objc 2.:class
     protocol WangProtocol: class {
         func wangProtocolChangeName(name: String)
     }
     ```
-    * 本页代理调用
+    * 本页代理调用
     ```Swift
     weak var delegate: WangProtocol?
     self.delegate?.wangProtocolChangeName(name: "我想要改变的_王家伟")
     ```
-    * 其它页面代理使用
+    * 其它页面代理使用
     ```Swift
     //遵循
     class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WangProtocol {}

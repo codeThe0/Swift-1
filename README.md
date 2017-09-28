@@ -555,7 +555,7 @@ func learn(fromLangeage: OC) -> Swift {
     ```Swift
     class func sharedInstanceTwo() -> WangInstance {
         struct Singleton{
-            //static var onceToken : dispatch_once_t = 0
+            static var onceToken : dispatch_once_t = 0
             static var single:WangInstance?
         }
         dispatch_once(&Singleton.onceToken,{

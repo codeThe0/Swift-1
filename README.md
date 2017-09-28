@@ -422,7 +422,7 @@ func learn(fromLangeage: OC) -> Swift {
             print("多余的参数：\(text2)")
         }
         self.navigationController?.pushViewController(vc, animated: true)
-        ```
+        ```
         
 ### Swift代理传值
 * Swift代理传值

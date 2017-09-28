@@ -8,7 +8,7 @@
 
 import UIKit
 
-//代理模式
+//代理模式: 1.@objc 2.:class
 protocol WangProtocol: class {
     func wangProtocolChangeName(name: String)
 }

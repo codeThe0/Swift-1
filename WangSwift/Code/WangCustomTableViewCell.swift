@@ -25,7 +25,7 @@ class WangCustomTableViewCell: UITableViewCell {
     
     func wangReload(imageUrl: String, title: String) {
         //使用kingfisher +
-        self.wangImageView.kf.setImage(with: URL(string: ""))
+        self.wangImageView.kf.setImage(with: URL(string: imageUrl))
         self.wangLabel.text = title
     }
     

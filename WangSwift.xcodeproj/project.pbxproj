@@ -16,6 +16,7 @@
 		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		43B5B2BE1F78DF69008DE475 /* WangGCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5B2BD1F78DF69008DE475 /* WangGCDViewController.swift */; };
 		43B5B2C01F78FF11008DE475 /* WangCATransform3DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5B2BF1F78FF11008DE475 /* WangCATransform3DViewController.swift */; };
+		43B5B2C21F7C8D83008DE475 /* WangCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5B2C11F7C8D83008DE475 /* WangCustomTableViewCell.swift */; };
 		43D281B51F665BF700207847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B41F665BF700207847 /* AppDelegate.swift */; };
 		43D281B71F665BF700207847 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D281B61F665BF700207847 /* ViewController.swift */; };
 		43D281BC1F665BF700207847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D281BB1F665BF700207847 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		43B5B2BD1F78DF69008DE475 /* WangGCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangGCDViewController.swift; sourceTree = "<group>"; };
 		43B5B2BF1F78FF11008DE475 /* WangCATransform3DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangCATransform3DViewController.swift; sourceTree = "<group>"; };
+		43B5B2C11F7C8D83008DE475 /* WangCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangCustomTableViewCell.swift; sourceTree = "<group>"; };
 		43D281B11F665BF700207847 /* WangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D281B41F665BF700207847 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43D281B61F665BF700207847 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */,
 				43B5B2BD1F78DF69008DE475 /* WangGCDViewController.swift */,
 				43B5B2BF1F78FF11008DE475 /* WangCATransform3DViewController.swift */,
+				43B5B2C11F7C8D83008DE475 /* WangCustomTableViewCell.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				43382E961F6F7471008BDEBC /* WangClosures.swift in Sources */,
 				43D281CA1F66701700207847 /* WangUIViewController.swift in Sources */,
 				43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */,
+				43B5B2C21F7C8D83008DE475 /* WangCustomTableViewCell.swift in Sources */,
 				4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

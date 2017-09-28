@@ -31,7 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.baseTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 40), style: .plain)
         self.baseTableView.delegate = self
         self.baseTableView.dataSource = self
-        self.baseTableView.register(UITableViewCell.self, forCellReuseIdentifier: myTableViewReuseIdentifer)
+        //self.baseTableView.register(UITableViewCell.self, forCellReuseIdentifier: myTableViewReuseIdentifer)
+        self.baseTableView.register(WangCustomTableViewCell.self, forCellReuseIdentifier: myTableViewReuseIdentifer)
         self.baseTableView.separatorStyle = .singleLine
         self.baseTableView.tableFooterView = UIView()
         self.view.addSubview(self.baseTableView)
@@ -58,11 +59,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: myTableViewReuseIdentifer, for: indexPath)
+        let cell: WangCustomTableViewCell? = tableView.dequeueReusableCell(withIdentifier: myTableViewReuseIdentifer, for: indexPath) as? WangCustomTableViewCell
+        /*
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: myTableViewReuseIdentifer)
         }
         cell?.textLabel?.text = (indexPath.section == 0) ? itemList[indexPath.row] : syntaxList[indexPath.row]
+         */
+        
+        cell?.wangReload(imageUrl: "https://placebeard.it/355/140", title: (indexPath.section == 0) ? itemList[indexPath.row] : syntaxList[indexPath.row])
+        
         return cell!
     }
     

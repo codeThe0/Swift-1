@@ -22,10 +22,10 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
     * [Swift闭包使用](#Swift闭包使用)
-    * [Swift代理传值](#Swift代理传值)
-    * [Swift桥接混编](#Swift桥接混编)
-    * [Swift底层实践](#Swift底层实践)
-    * [Swift单例实现](#Swift单例实现)
+    * [Swift代理传值](#Swift代理传值)
+    * [Swift桥接混编](#Swift桥接混编)
+    * [Swift底层实践](#Swift底层实践)
+    * [Swift单例实现](#Swift单例实现)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -551,8 +551,8 @@ func learn(fromLangeage: OC) -> Swift {
         return Static.instance
     }
     ```
-    * OC迁移至Swfit dispatch方式 已废弃
-    ```Swift
+    * <del>OC迁移至Swfit dispatch方式 已废弃</del>
+    ```Swift
     class func sharedInstanceTwo() -> WangInstance {
         struct Singleton{
             //static var onceToken : dispatch_once_t = 0

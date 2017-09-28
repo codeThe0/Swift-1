@@ -21,9 +21,9 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift网络原生](#Swift网络原生)
     * [Swift约束布局](#Swift约束布局)
     * [Swift的懒加载](#Swift的懒加载)
-    * [Swift闭包使用](#Swift闭包使用)
-    * [Swift代理传值](#Swift代理传值)
-    * [Swift桥接混编](#Swift桥接混编)
+    * [Swift闭包使用](#Swift闭包使用)
+    * [Swift代理传值](#Swift代理传值)
+    * [Swift桥接混编](#Swift桥接混编)
     * [Swift底层实践](#Swift底层实践)
     
 ### Swift项目规划

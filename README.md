@@ -39,7 +39,7 @@ func learn(fromLangeage: OC) -> Swift {
 |---|---|
 |[AppDelegate](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/AppDelegate.swift)|纯代码创建window视图|
 |[ViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/ViewController.swift)|纯代码tableview、根视图列表、闭包回调传值调用|
-|[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合、闭包之回调传值|
+|[WangUIViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangUIViewController.swift)|基本UI控件集合、闭包之回调传值、代理之回调传值|
 |[WangNetViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangNetViewController.swift)|网络请求代码|
 |[WangAlamofireAndSwiftyJSONViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAlamofireAndSwiftyJSONViewController.swift)|Alamofire + SwiftyJSON库使用|
 |[WangAutolayoutViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangAutolayoutViewController.swift)|swift原生Autolayout三种约束形式、懒加载使用|
@@ -421,7 +421,34 @@ func learn(fromLangeage: OC) -> Swift {
             print("多余的参数：\(text2)")
         }
         self.navigationController?.pushViewController(vc, animated: true)
-        ```
+        ```
+
+### Swift代理传值
+* Swift代理传值
+    * 创建代理
+    ```Swift
+    //代理模式: 1.@objc 2.:class
+    protocol WangProtocol: class {
+        func wangProtocolChangeName(name: String)
+    }
+    ```
+    * 本页代理调用
+    ```Swift
+    weak var delegate: WangProtocol?
+    self.delegate?.wangProtocolChangeName(name: "我想要改变的_王家伟")
+    ```
+    * 其它页面代理使用
+    ```Swift
+    //遵循
+    class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WangProtocol {}
+    vc.delegate = self
+    //遵循代理
+    func wangProtocolChangeName(name: String) {
+        //重新获取strong self
+        self.itemList[1] = name
+        self.baseTableView.reloadData()
+    }
+    ```
 
 ### Swift桥接混编
 * swift混编oc

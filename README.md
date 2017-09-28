@@ -24,7 +24,8 @@ func learn(fromLangeage: OC) -> Swift {
     * [Swift闭包使用](#Swift闭包使用)
     * [Swift代理传值](#Swift代理传值)
     * [Swift桥接混编](#Swift桥接混编)
-    * [Swift底层实践](#Swift底层实践)
+    * [Swift底层实践](#Swift底层实践)
+    * [Swift单例实现](#Swift单例实现)
     
 ### Swift项目规划
 * 纯代码 VS 故事板 -.- Code VS StoryBoard
@@ -53,6 +54,7 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangUnitTest](https://github.com/wang542413041/WangSwift/blob/master/WangSwiftTests/WangSwiftTests.swift)|swift单元测试代码|
 |[WangGCDViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangGCDViewController.swift)|swift的GCD下载图片示例|
 |[WangCustomCell](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangCustomTableViewCell.swift)|自定义tableviewcell|
+|[WangInstance](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangInstance.swift)|单例模式|
 
 ### Swift开源模板
 * 第三方库使用
@@ -523,4 +525,43 @@ func learn(fromLangeage: OC) -> Swift {
     * 闭包:
     ```Swift
     { (参数) -> 返回值 in 语句 }
+    ```
+
+### 单例实现
+* 单例创建方式
+    * 最正确、最简洁单例 常量形式
+    ```Swift
+    static let sharedInstance = WangInstance()
+    ```
+    * 全局常量
+    ```Swift
+    //类外创建
+    let single = WangInstance()
+    //类内
+    class var sharedInstanceThree : WangInstance {
+        return single
+    }
+    ```
+    * 方法内静态常量
+    ```Swift
+    static var sharedInstanceFour : WangInstance {
+        struct Static {
+            static let instance : WangInstance = WangInstance()
+        }
+        return Static.instance
+    }
+    ```
+    * OC迁移至Swfit dispatch方式 已废弃
+    ```Swift
+    class func sharedInstanceTwo() -> WangInstance {
+        struct Singleton{
+            //static var onceToken : dispatch_once_t = 0
+            static var single:WangInstance?
+        }
+        dispatch_once(&Singleton.onceToken,{
+            Singleton.single=shareSingleTwo()
+        }
+        )
+        return Singleton.single!
+    }
     ```

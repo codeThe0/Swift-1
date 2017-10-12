@@ -6,4 +6,5 @@ target 'WangSwift' do
     pod 'SwiftyJSON'
     pod 'Kingfisher', '~> 4.0.1'
     pod 'SnapKit'
+    pod 'FSPagerView'
 end

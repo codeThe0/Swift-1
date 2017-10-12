@@ -12,6 +12,8 @@
 		43382E941F6F6F3B008BDEBC /* WangQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E931F6F6F3B008BDEBC /* WangQueue.swift */; };
 		43382E961F6F7471008BDEBC /* WangClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43382E951F6F7471008BDEBC /* WangClosures.swift */; };
 		434447BA1F74E5360085AC32 /* WangSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434447B91F74E5360085AC32 /* WangSwiftTests.swift */; };
+		434567581F8F5EA6003F74EF /* WangBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434567571F8F5EA6003F74EF /* WangBannerViewController.swift */; };
+		4345675D1F8F630B003F74EF /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345675C1F8F630B003F74EF /* Const.swift */; };
 		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
 		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		4376A2001F7CF67500F2AF42 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5B3871F7CF2B5008DE475 /* MJRefreshNormalHeader.m */; };
@@ -71,6 +73,8 @@
 		434447B71F74E5360085AC32 /* WangSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WangSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434447B91F74E5360085AC32 /* WangSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSwiftTests.swift; sourceTree = "<group>"; };
 		434447BB1F74E5360085AC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434567571F8F5EA6003F74EF /* WangBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangBannerViewController.swift; sourceTree = "<group>"; };
+		4345675C1F8F630B003F74EF /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
 		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		4376A2261F7CF96E00F2AF42 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 		43D281A81F665BF700207847 = {
 			isa = PBXGroup;
 			children = (
+				4345675C1F8F630B003F74EF /* Const.swift */,
 				43E773B71F6A5BB7005C0734 /* WangSwift-Bridging-Header.h */,
 				43E773B81F6A5BB8005C0734 /* Test.h */,
 				43E773B91F6A5BB8005C0734 /* Test.m */,
@@ -359,6 +364,7 @@
 				43B5B2BF1F78FF11008DE475 /* WangCATransform3DViewController.swift */,
 				43B5B2C11F7C8D83008DE475 /* WangCustomTableViewCell.swift */,
 				43B5B3641F7CE40D008DE475 /* WangInstance.swift */,
+				434567571F8F5EA6003F74EF /* WangBannerViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WangSwift/Pods-WangSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -506,6 +513,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -555,6 +563,7 @@
 				4376A2051F7CF6C800F2AF42 /* MJRefreshHeader.m in Sources */,
 				4376A2061F7CF6C800F2AF42 /* MJRefreshAutoGifFooter.m in Sources */,
 				4376A2071F7CF6C800F2AF42 /* MJRefreshAutoNormalFooter.m in Sources */,
+				434567581F8F5EA6003F74EF /* WangBannerViewController.swift in Sources */,
 				4376A2081F7CF6C800F2AF42 /* MJRefreshAutoStateFooter.m in Sources */,
 				4376A2091F7CF6C800F2AF42 /* MJRefreshBackGifFooter.m in Sources */,
 				4376A20A1F7CF6C800F2AF42 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -585,6 +594,7 @@
 				43382E901F6F6CFA008BDEBC /* WangStack.swift in Sources */,
 				43B5B2C21F7C8D83008DE475 /* WangCustomTableViewCell.swift in Sources */,
 				4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */,
+				4345675D1F8F630B003F74EF /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +778,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 436JJA3UCK;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = WangSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -789,6 +800,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 436JJA3UCK;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = WangSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

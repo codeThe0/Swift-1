@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var baseTableView: UITableView!
     let myTableViewReuseIdentifer = "myTableViewReuseIdentifer"
-    var itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局", "swift调用OC方法", "SnapKit使用方法", "Kingfisher使用方法", "GCD使用方法", "CATransform使用方法"]
+    var itemList = ["基础UI图形", "原生网络请求", "Alamofire + SwiftyJSON使用", "swift原生约束布局", "swift调用OC方法", "SnapKit使用方法", "Kingfisher使用方法", "GCD使用方法", "CATransform使用方法", "图片轮播"]
     var syntaxList = ["闭包"]
 
     override func viewDidLoad() {
@@ -139,6 +139,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.navigationController?.pushViewController(vc, animated: true)
             } else if indexPath.row == 8 {
                 let vc = WangCATransform3DViewController()
+                vc.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else if indexPath.row == 9 {
+                let vc = WangBannerViewController()
                 vc.hidesBottomBarWhenPushed = true
                 self.navigationController?.pushViewController(vc, animated: true)
             }

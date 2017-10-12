@@ -56,6 +56,8 @@ func learn(fromLangeage: OC) -> Swift {
 |[WangGCDViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangGCDViewController.swift)|swift的GCD下载图片示例|
 |[WangCustomCell](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangCustomTableViewCell.swift)|自定义tableviewcell|
 |[WangInstance](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangInstance.swift)|单例模式|
+|[WangBannerViewController](https://github.com/wang542413041/WangSwift/blob/master/WangSwift/Code/WangBannerViewController.swift)|iPhone X 多种适配、多样式图片轮播、kingfisher&&snapkit混用、状态栏修改、导航栏隐藏操作等|
+|[Swift宏定义文件](https://github.com/wang542413041/WangSwift/blob/master/Const.swift)|实现类似OC的宏定义使用方式、常用宽高、iPhone X判断等|
 
 ### Swift开源模板
 * 第三方库使用

@@ -69,6 +69,10 @@ class WangBannerViewController: UIViewController, FSPagerViewDataSource,FSPagerV
         // Dispose of any resources that can be recreated.
     }
     
+    @objc func btnTouch() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - 基础视图
     func createSampleView() {
         
@@ -113,6 +117,17 @@ class WangBannerViewController: UIViewController, FSPagerViewDataSource,FSPagerV
             make.top.equalTo(view1.snp.top).offset(10)
             make.bottom.equalTo(view1.snp.bottom).offset(-10)
             make.width.equalTo(0.5)
+        }
+        //添加一个返回按钮
+        let btn = UIButton()
+        btn.setTitle("返回", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.addTarget(self, action: #selector(btnTouch), for: .touchUpInside)
+        view1.addSubview(btn)
+        btn.snp.makeConstraints { (make) in
+            make.centerY.equalTo(view1)
+            make.left.equalTo(view1.snp.left)
+            make.size.equalTo(CGSize(width: 100, height: 100))
         }
         
         //添加二层背景
@@ -193,7 +208,6 @@ class WangBannerViewController: UIViewController, FSPagerViewDataSource,FSPagerV
         pagerView.scrollToItem(at: index, animated: true)
         self.pageControl.currentPage = index
         print("移动到 -> \(index)")
-        self.navigationController?.popViewController(animated: true)
     }
     
     func pagerViewDidScroll(_ pagerView: FSPagerView) {

@@ -1,5 +1,6 @@
 # WangSwift
 3天开发iOS APP
+**如下内容慢慢转移至wiki，敬请期待**
 ```Swift
 func learn(fromLangeage: OC) -> Swift { 
     return WangSwift

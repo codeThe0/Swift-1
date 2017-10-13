@@ -14,6 +14,8 @@
 		434447BA1F74E5360085AC32 /* WangSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434447B91F74E5360085AC32 /* WangSwiftTests.swift */; };
 		434567581F8F5EA6003F74EF /* WangBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434567571F8F5EA6003F74EF /* WangBannerViewController.swift */; };
 		4345675D1F8F630B003F74EF /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345675C1F8F630B003F74EF /* Const.swift */; };
+		434567711F90A67C003F74EF /* TurntableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 434567701F90A67C003F74EF /* TurntableView.m */; };
+		434567731F90AA15003F74EF /* WangTurntableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434567721F90AA15003F74EF /* WangTurntableViewController.swift */; };
 		4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */; };
 		4348BA921F6BA7F000B22D4B /* WangKingfisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */; };
 		4376A2001F7CF67500F2AF42 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B5B3871F7CF2B5008DE475 /* MJRefreshNormalHeader.m */; };
@@ -75,6 +77,9 @@
 		434447BB1F74E5360085AC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434567571F8F5EA6003F74EF /* WangBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangBannerViewController.swift; sourceTree = "<group>"; };
 		4345675C1F8F630B003F74EF /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		4345676F1F90A67C003F74EF /* TurntableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TurntableView.h; sourceTree = "<group>"; };
+		434567701F90A67C003F74EF /* TurntableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurntableView.m; sourceTree = "<group>"; };
+		434567721F90AA15003F74EF /* WangTurntableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangTurntableViewController.swift; sourceTree = "<group>"; };
 		4348BA8F1F6BA31300B22D4B /* WangSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangSnapKitViewController.swift; sourceTree = "<group>"; };
 		4348BA911F6BA7F000B22D4B /* WangKingfisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WangKingfisherViewController.swift; sourceTree = "<group>"; };
 		4376A2261F7CF96E00F2AF42 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -197,6 +202,17 @@
 			path = WangSwiftTests;
 			sourceTree = "<group>";
 		};
+		4345676E1F90A579003F74EF /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				43E773B81F6A5BB8005C0734 /* Test.h */,
+				43E773B91F6A5BB8005C0734 /* Test.m */,
+				4345676F1F90A67C003F74EF /* TurntableView.h */,
+				434567701F90A67C003F74EF /* TurntableView.m */,
+			);
+			path = "Objective-C";
+			sourceTree = "<group>";
+		};
 		43B5B3661F7CF2A2008DE475 /* 3RD */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,8 +321,6 @@
 			children = (
 				4345675C1F8F630B003F74EF /* Const.swift */,
 				43E773B71F6A5BB7005C0734 /* WangSwift-Bridging-Header.h */,
-				43E773B81F6A5BB8005C0734 /* Test.h */,
-				43E773B91F6A5BB8005C0734 /* Test.m */,
 				43D281B31F665BF700207847 /* WangSwift */,
 				434447B81F74E5360085AC32 /* WangSwiftTests */,
 				43D281B21F665BF700207847 /* Products */,
@@ -327,6 +341,7 @@
 		43D281B31F665BF700207847 /* WangSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4345676E1F90A579003F74EF /* Objective-C */,
 				43D281CF1F67715700207847 /* Podfile */,
 				43D281C01F665BF700207847 /* Info.plist */,
 				43B5B3661F7CF2A2008DE475 /* 3RD */,
@@ -365,6 +380,7 @@
 				43B5B2C11F7C8D83008DE475 /* WangCustomTableViewCell.swift */,
 				43B5B3641F7CE40D008DE475 /* WangInstance.swift */,
 				434567571F8F5EA6003F74EF /* WangBannerViewController.swift */,
+				434567721F90AA15003F74EF /* WangTurntableViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -570,6 +586,7 @@
 				4376A20B1F7CF6C800F2AF42 /* MJRefreshBackStateFooter.m in Sources */,
 				4376A20C1F7CF6C800F2AF42 /* MJRefreshGifHeader.m in Sources */,
 				4376A20D1F7CF6C800F2AF42 /* MJRefreshStateHeader.m in Sources */,
+				434567711F90A67C003F74EF /* TurntableView.m in Sources */,
 				4376A20E1F7CF6C800F2AF42 /* MJRefreshConst.m in Sources */,
 				4376A20F1F7CF6C800F2AF42 /* NSBundle+MJRefresh.m in Sources */,
 				4376A2101F7CF6C800F2AF42 /* UIScrollView+MJExtension.m in Sources */,
@@ -577,6 +594,7 @@
 				4376A2121F7CF6C800F2AF42 /* UIView+MJExtension.m in Sources */,
 				4376A2001F7CF67500F2AF42 /* MJRefreshNormalHeader.m in Sources */,
 				43D281D21F67729700207847 /* WangAlamofireAndSwiftyJSONViewController.swift in Sources */,
+				434567731F90AA15003F74EF /* WangTurntableViewController.swift in Sources */,
 				43B5B3651F7CE40D008DE475 /* WangInstance.swift in Sources */,
 				43382E921F6F6DA6008BDEBC /* AlgorithmRun.swift in Sources */,
 				4348BA901F6BA31300B22D4B /* WangSnapKitViewController.swift in Sources */,

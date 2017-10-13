@@ -4,3 +4,4 @@
 
 #import "Test.h"
 #import "MJRefresh.h"
+#import "TurntableView.h"

@@ -8,6 +8,7 @@
 
 import UIKit
 
+///网络请求测试界面
 class WangNetViewController: UIViewController {
     
     public let newsKey = "ab10d0327c38043562215a81bd634171"

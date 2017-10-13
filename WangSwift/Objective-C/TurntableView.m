@@ -74,12 +74,14 @@
 }
 
 #pragma mark - 开始旋转
+//传入停留位置：肯定不是随机的 你懂得！!!
 - (void)startPlay {
     
     NSInteger turnAngle = 0;//旋转角度
     NSInteger randomNum = arc4random()%100;//控制概率
     NSInteger turnsNum = arc4random()%5+1;//控制圈数
     
+    //根据概率指定停留位置
     if (randomNum>=0 && randomNum<20) {//80%的概率 就是0-80
         
         if (randomNum < 40) {

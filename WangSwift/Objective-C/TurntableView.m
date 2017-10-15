@@ -40,7 +40,7 @@
     [self.playButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     self.playButton.center = CGPointMake(CGRectGetWidth(self.bounds)/2, CGRectGetWidth(self.bounds)/2);
     self.playButton.layer.cornerRadius = CGRectGetWidth(self.bounds)/3/2;
-    [self.playButton addTarget:self action:@selector(startPlay) forControlEvents:UIControlEventTouchUpInside];
+    [self.playButton addTarget:self action:@selector(btnTouchup) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.playButton];
     //可能包含装饰背景等：需要做成镂空或者放置在最顶层。此处忽略
     UIImageView *customImageView = [UIImageView new];
@@ -75,50 +75,13 @@
 
 #pragma mark - 开始旋转
 //传入停留位置：肯定不是随机的 你懂得！!!
-- (void)startPlay {
-    
-    NSInteger turnAngle = 0;//旋转角度
-    NSInteger randomNum = arc4random()%100;//控制概率
-    NSInteger turnsNum = arc4random()%5+1;//控制圈数
-    
-    //根据概率指定停留位置
-    if (randomNum>=0 && randomNum<20) {//80%的概率 就是0-80
-        
-        if (randomNum < 40) {
-            turnAngle = 0;
-        }else{
-            turnAngle = 135;
-        }
-        
-    } else if (randomNum>=20 && randomNum<40) {
-        
-        if (randomNum < 75) {
-            turnAngle = 45;
-        }else{
-            turnAngle = 225;
-        }
-        
-    } else if (randomNum >=40 && randomNum<60) {
-        
-        turnAngle = 315;
-        
-    } else if(randomNum >=60 && randomNum<80){
-        
-        if (randomNum < 95) {
-            turnAngle = 90;
-        }else{
-            turnAngle = 270;
-        }
-        
-    }else{
-        // > 80
-        turnAngle = 180;
-    }
-    
-    //    NSLog(@"randomNum = %ld , angle = %ld , turnsNum = %ld",randomNum,turnAngle,turnsNum);
-    CGFloat perAngle = M_PI/180.0;
-    
-    CABasicAnimation* rotationAnimation;
+- (void)startPlayWithTurnAngle:(NSInteger)turnAngle {
+    //0 45 90 135 180 225 270 315 -> 45度一个刻度
+    //NSInteger randomNum = arc4random()%100;//控制概率
+    NSInteger turnsNum = arc4random()%5+1;//控制圈数:显得真实
+    CGFloat perAngle = M_PI/180.0;//单圈
+    //旋转动画
+    CABasicAnimation *rotationAnimation;
     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = [NSNumber numberWithFloat:turnAngle * perAngle + 360 * perAngle * turnsNum];
     rotationAnimation.duration = 3.0f;
@@ -132,6 +95,33 @@
     
     // 转盘结束后调用，显示获得的对应奖励
 }
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    NSLog(@"动画结束,开始回调");
+    if (self.stopBlock) {
+        self.stopBlock();
+    } else {
+        NSLog(@"动画完成代码块未赋值");
+    }
+}
+
+#pragma mark - 按钮点击以及回调
+- (void)btnTouchup {
+    if (self.actionBlock) {
+        self.actionBlock();
+    } else {
+        NSLog(@"按钮启动未赋值代码块未赋值");
+    }
+}
+
+- (void)makeActionBlock:(BtnActionBlock)actionBlock {
+    self.actionBlock = actionBlock;
+}
+
+- (void)makeStopBlock:(RotateStopBlock)stopBlock {
+    self.stopBlock = stopBlock;
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

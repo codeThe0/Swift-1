@@ -18,11 +18,17 @@ class WangTurntableViewController: UIViewController {
         let tt = TurntableView(frame: CGRect(x: 0, y: 100, width: SCREEN_WIDTH, height: SCREEN_WIDTH));
         tt.backgroundColor = .yellow
         self.view.addSubview(tt)
+        
+        tt.actionBlock = {
+            tt.startPlay(withTurnAngle: 45)
+        }
+        /*
         tt.makeActionBlock {
             //顺时针旋转。逆时针计算 0点左数：45 90 135 ...
             //计算奖项 : 100 -> 800
             tt.startPlay(withTurnAngle: 45)
-        }
+        }*/
+        
         //代码块
         tt.makeStop {
             

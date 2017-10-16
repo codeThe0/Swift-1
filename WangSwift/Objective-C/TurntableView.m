@@ -8,9 +8,6 @@
 
 #import "TurntableView.h"
 
-#define turnScale_W self.bounds.size.width/300
-#define turnScale_H self.bounds.size.height/300
-
 @interface TurntableView()<CAAnimationDelegate>
 
 @end

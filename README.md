@@ -1,5 +1,10 @@
 # Swift文档 --> [wiki](https://github.com/wang542413041/WangSwift/wiki)<br/>
 
+最近忙着看岗位
+忙着做Today扩展
+忙着做watch应用
+之后会回来继续完善swift代码，并进行重构。
+
 * `阅读项目源代码直接下载`
     * ```git clone https://github.com/wang542413041/Swift.git```
     * ```clone or download --> download zip```

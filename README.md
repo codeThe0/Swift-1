@@ -10,7 +10,7 @@ UI模块主讲UI使用
 
 swift数据结构和算法主要是参考swift算法俱乐部开源项目
 
-[如有疑问可以邮件联系](wangjiawei@wangjiawei.wang)
+如有疑问可以邮件联系: wangjiawei@wangjiawei.wang
 
 [博客留言](http://www.wangjiawei.wang)
 
